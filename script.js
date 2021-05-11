@@ -5,7 +5,9 @@ const vue = new Vue({
         mailList : [],
     },
     methods:{
-  
+        randomEmails(){
+            
+        }
     },
     mounted(){
         for(i = 0; i< 10; i++){
@@ -13,7 +15,7 @@ const vue = new Vue({
             .then((resp)=>{
                 let randomMail = resp.data.response;
                 this.mailList.push(randomMail);
-                if(this.mailList.length == 9){
+                if(this.mailList.length == 10){
                     this.mailListCompleted = [...this.mailList]
                 }
             })

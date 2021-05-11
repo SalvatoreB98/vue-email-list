@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <title>Mail list</title>
 </head>
+
 <body>
     <main id="vueContainer">
         <h1>Lista di mail random</h1>
-        <ul> 
-            <li v-for="(mail,index) in mailList"> {{mailListCompleted[index]}}</li>
+        <div class="horizontal-line"></div>
+        <ul>
+            <li v-for="(mail,index) in mailList"> <i class="fa fa-envelope" aria-hidden="true"></i> {{mailListCompleted[index]}}</li>
         </ul>
+
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
