@@ -14,12 +14,19 @@
 
 <body>
     <main id="vueContainer">
-        <h1>Lista di mail random</h1>
-        <div class="horizontal-line"></div>
-        <ul>
-            <li v-for="(mail,index) in mailList"> <i class="fa fa-envelope" aria-hidden="true"></i> {{mailListCompleted[index]}}</li>
-        </ul>
-
+        <div class="heading">
+            <h1>Lista di mail random</h1>
+            <a href="index.html">
+                <div class="btn"> Ricarica</div>
+            </a>
+        </div>
+        <div class="container">
+            <ul>
+                <li v-for="(mail,index) in mailList"> <i class="fa fa-envelope" v-if="!isLoading"
+                        aria-hidden="true"></i> {{mailListCompleted[index]}}</li>
+            </ul>
+            <div v-if="isLoading" class="loading"> <img src="/loading.gif" alt=""></div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
