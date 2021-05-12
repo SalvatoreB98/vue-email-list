@@ -9,6 +9,7 @@ const vue = new Vue({
         randomEmails() {
             this.isLoading = true;
             this.mailListCompleted = [];
+            this.mailList = [] ;
             for (let i = 0; i < 10; i++) {
                 setTimeout(() => {
                     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -25,6 +26,6 @@ const vue = new Vue({
         }
     },
     mounted() {
-        this.randomEmails();
+        // this.randomEmails();
     }
 });
